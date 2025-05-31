@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 # Force REPO variable to avoid 404s
-export REPO="community-scripts/ProxmoxVE"
-
-# Force HEADER_FILE variable to avoid missing header.html
-export HEADER_FILE="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/header.html"
+export REPO="ColterD/profilarr-lxc"
 
 # Source build functions
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
