@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-export REPO="ColterD/profilarr-lxc"
 
-# Check header.html manually to avoid automatic fetch failure
-curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/header.html > /tmp/header.html
-source /tmp/header.html
+# Force REPO variable to avoid 404s
+export REPO="community-scripts/ProxmoxVE"
 
+# Source build functions
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 
 APP="Profilarr"
