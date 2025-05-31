@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
 # Force REPO variable to avoid 404s
-export REPO="ColterD/profilarr-lxc"
+export REPO="community-scripts/ProxmoxVE"
 
 # Source build functions
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+
+# Override get_header to avoid 404 error
+get_header() {
+  header_content=$(curl -fsSL "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/header.html")
+  echo "$header_content"
+}
 
 APP="Profilarr"
 var_tags="${var_tags:-arr}"
