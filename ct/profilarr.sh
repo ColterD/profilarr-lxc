@@ -49,9 +49,15 @@ function update_script() {
 start
 build_container
 
+# Set the default port variable (community style)
+# The container's own application config should listen on this port internally.
+# The community-scripts convention does not explicitly map LXC config ports here; that happens at the app or Docker level.
+
+# Optional note: port assignment is application-level; Proxmox LXC bridges typically allow access on the internal IP directly.
+
 description
 
 msg_ok "Completed Successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
 echo -e "${INFO}${YW} Access it using the following IP:${CL}"
-echo -e "${TAB}${GATEWAY}${BGN}${IP}:${var_port}${CL}"
+echo -e "${TAB}${GATEWAY}${BGN}${IP}:${var_port}${CL}
