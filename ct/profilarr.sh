@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-REPO="community-scripts/ProxmoxVE"
+export REPO="community-scripts/ProxmoxVE"
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: ColterD
