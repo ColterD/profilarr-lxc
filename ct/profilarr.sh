@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
-export REPO="community-scripts/ProxmoxVE"
+export REPO="ColterD/profilarr-lxc"
 source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2025 community-scripts ORG
-# Author: ColterD
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://dictionarry.dev/
 
 APP="Profilarr"
 var_tags="${var_tags:-arr}"
